@@ -22,7 +22,7 @@ Instalación (Windows - PowerShell)
 1. Clona o descarga el repositorio y sitúate en la carpeta del proyecto:
 
 ```powershell
-cd "c:\Users\cread\OneDrive\Documentos\Cursos CoderHouse\78335\clases-78335-main\proyecto"
+cd "c:..\Python-Django"
 ```
 
 2. (Opcional pero recomendado) Crea y activa un entorno virtual:
@@ -157,3 +157,4 @@ Ejemplo visual del flujo completo:
 Acción	URL	Qué hace
 Agregar perro	/comprar-perro/Labrador/Grande	Crea un nuevo perro (raza Labrador, tamaño Grande)
 Ver lista	/listar-perros/	Muestra todos los perros guardados
+
