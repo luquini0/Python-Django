@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Dinámica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; }
+        header { background: #333; color: white; padding: 10px 20px; }
+        nav ul { list-style: none; display: flex; gap: 20px; padding: 0; margin: 0; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+        .banner { background: url('https://picsum.photos/1200/400?grayscale') center/cover no-repeat; height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2em; font-weight: bold; }
+        .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; padding: 20px; background: #f4f4f4; }
+        .carousel img { height: 200px; width: auto; scroll-snap-align: center; border-radius: 10px; }
+        .map { padding: 20px; text-align: center; }
+        iframe { width: 100%; height: 300px; border: none; }
+        footer { background: #222; color: white; text-align: center; padding: 20px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Proyecto Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner" id="inicio">
+        ¡Bienvenido a tu nueva landing!
+    </section>
+
+    <section class="carousel" id="galeria">
+        <img src="https://picsum.photos/id/1015/400/200" alt="Imagen 1">
+        <img src="https://picsum.photos/id/1016/400/200" alt="Imagen 2">
+        <img src="https://picsum.photos/id/1018/400/200" alt="Imagen 3">
+        <img src="https://picsum.photos/id/1020/400/200" alt="Imagen 4">
+    </section>
+
+    <section class="map" id="ubicacion">
+        <h2>¿Dónde estamos?</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.282158552306!2d-68.84535692437393!3d-34.64463487293459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9678c5a3f1e2e3f3%3A0x8e5e9c3b3b3b3b3b!2sGodoy%20Cruz%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1630000000000!5m2!1ses!2sar" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <footer id="contacto">
+        <p>&copy; 2025 Mi Proyecto Web. Todos los derechos reservados.</p>
+        <p><i class="fas fa-envelope"></i> contacto@tusitio.com | <i class="fas fa-phone"></i> +54 261 1234567</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perro Comprado</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #74b9ff, #a29bfe);
+      color: #2d3436;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      max-width: 400px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .emoji {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      animation: bounce 1.5s infinite;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: #2d3436;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 5px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #0984e3;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #74b9ff;
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="emoji">🐾</div>
+    <h1>¡Se compró un perro!</h1>
+    <p><strong>Raza:</strong> {{ perros_comprados.raza }}</p>
+    <p><strong>Tamaño:</strong> {{ perros_comprados.tamaño }}</p>
+
+  </div>
+</body>
+</html>
