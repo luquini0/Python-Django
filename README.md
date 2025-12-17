@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Proyecto: Python-Django
 
 Descripción
