@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}<title>Ver Perro</title>{% endblock title %}
+{% block contenido %}
+  <h1>Detalles del Perro</h1>
+  <p>Raza: {{ perro.raza }}</p>
+  <p>Tamaño: {{ perro.tamaño }}</p>
+  <a href="{% url 'listar' %}">Volver a la lista</a>
+{% endblock contenido %}

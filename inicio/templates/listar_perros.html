@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}<title>Listar Perros</title>{% endblock title %}
+{% block contenido %}
+  <h1>Listado de Perros Disponibles</h1>
+
+  <form action="{% url 'listar' %}" method="GET">
+    {{formulario.as_p}}
+    <input type="submit" value="Buscar">
+  </form>
+
+  {% if listado_de_perros %}
+  <ul>
+    {% for perro in listado_de_perros %}  
+    <li>
+        {{ perro|upper }} 
+        | <a href="{% url 'ver' perro.id %}">Ver detalles</a> 
+        | <a href="{% url 'actualizar' perro.id %}">Actualizar</a>
+        | <a href="{% url 'eliminar' perro.id %}">Eliminar</a>
+    </li>
+    {% endfor %}
+  </ul>
+  
+  {% else %}
+
+    <p>No hay perros disponibles en este momento.</p>
+
+  {% endif %}
+
+  <a href="{% url 'inicio' %}">Volver al inicio</a>
+
+{% endblock contenido %}
+
+
+
+

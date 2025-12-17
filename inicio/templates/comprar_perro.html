@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}<title>Comprar Perro</title>{% endblock title %}
+{% block contenido %}
+  <form action="{% url 'comprar' %}" method="POST">
+    {% csrf_token %}
+    {{formulario}}
+    <!-- <label for="raza">Raza:</label>
+    <input type="text" id="raza" name="raza" required><br><br>
+    <label for="tamaño">Tamaño:</label>
+    <input type="text" id="tamaño" name="tamaño" required><br><br>
+    -->
+    <input type="submit" value="Comprar">
+    
+  </form>
+  <p><strong>PERRO</strong>
+  <p><strong>Raza:</strong> {{ perros_comprados.raza }}</p>
+  <p><strong>Tamaño:</strong> {{ perros_comprados.tamaño }}</p>
+  <a href="{% url 'inicio' %}">Volver al inicio</a>
+{% endblock contenido %}
+
+
+
