@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 numpy==2.3.4
 asgiref==3.10.0
 Django==5.2.7
 numpy==2.3.4
 sqlparse==0.5.3
+=======
+numpy==2.3.4
+asgiref==3.10.0
+Django==5.2.7
+numpy==2.3.4
+sqlparse==0.5.3
+>>>>>>> dd686a4e1f4202362c07ebce170f5dcb86ca1bbc
 tzdata==2025.2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from inicio.models import Perro
@@ -89,3 +90,32 @@ class EliminarPerro(LoginRequiredMixin, DeleteView):
     template_name = 'eliminar_perro.html'
     fields = '__all__' # para que aparezcan todos los campos del modelo
     success_url = reverse_lazy('listar')
+=======
+from django.shortcuts import render
+from django.http import HttpResponse
+from inicio.models import Perro
+
+# Create your views here.
+
+def inicio(request):
+    """ return HttpResponse("Hello, world. You're at the polls index.") """
+    return render(request, 'inicio.html')
+
+
+def otra(request):
+    return render(request, 'otra.html')
+
+
+def comprar_perro(request, raza, tamaño):
+
+    perro = Perro(raza=raza, tamaño=tamaño)
+    perro.save()
+
+    return render(request, 'comprar_perro.html', {'perros_comprados': perro})
+
+def listar_perros(request):
+
+    perros = Perro.objects.all()
+
+    return render(request, 'listar_perros.html', {'listado_de_perros': perros})
+>>>>>>> dd686a4e1f4202362c07ebce170f5dcb86ca1bbc
